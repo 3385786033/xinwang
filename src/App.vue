@@ -1,16 +1,15 @@
 <template>
   <div id="app">
-    <Index msg="Welcome to Your Vue.js App"/>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import Index from './components/index.vue'
-
 export default {
   name: 'App',
-  components: {
-    Index
+  created() {
+    //横竖屏
+
   }
 }
 </script>
@@ -20,8 +19,15 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  max-width: 640px;
+  margin: 0 auto;
+  background-color: #f3f3f3;
+  width: 100%;
+  height: 100%;
 }
+  *{
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+  }
 </style>
